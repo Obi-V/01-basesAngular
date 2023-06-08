@@ -1,0 +1,29 @@
+<h3>Listado de Héroes</h3>
+
+<!-- Si deletedHero no es nulo se activará este div, de lo contrario activará el que tiene el identificador #nothingWasDeleted -->
+<div *ngIf="deletedHero; else nothingWasDeleted">
+  <h3>Héroe borrado <small class="text-danger"> {{ deletedHero }} </small> </h3>
+</div>
+
+<!-- Con el hash # colocamos un identificador para esta etiqueta que usamos en el *ngIf del anterior div-->
+<ng-template #nothingWasDeleted>
+  <h3>No ha borrado nada.</h3>
+</ng-template>
+
+<button
+  *ngIf="heroNames.length > 0"
+  (click)="removeLastHero()"
+  class="btn btn-outline-danger">
+  Borrar último héroe
+</button>
+
+<!-- Con la directiva *ngFor iteramos la propiedad del componente heroNames, que es un array definido en el TS,
+  cada elemento del array será la variable let 'name', por cada elemento en el array creamos un elemento lista 'li'
+  con su valor, en este caso solo es el nombre.
+-->
+<ul class="mt-2 list-group">
+  <li *ngFor="let name of heroNames"
+      class="list-group-item">
+      {{ name }}
+  </li>
+</ul>
