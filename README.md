@@ -22,4 +22,4 @@ Recomiendo tener algunos conocimientos previos de Angular, su estructiración de
 
 Una vez que la aplicación esté en funcionamiento, puedes explorar las diferentes secciones y temas para aprender sobre Angular. Cada tema proporciona explicaciones, fragmentos de código y ejercicios para ayudarte a comprender mejor los conceptos de Angular. ¡Diviértete aprendiendo!
 
-### Texto creado por el chatGtp
+### Texto creado por el chatGTP
